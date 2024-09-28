@@ -72,9 +72,17 @@ class DocumentHandler:
 
 # Streamlit application layout
 def main():
-    st.set_page_config(page_title="Cheat Sheet Generator", layout="wide")  # Set page title and layout
-    st.title("📝 Cheat Sheet Generator")
-    st.sidebar.header("Generate Cheat Sheet")  # Sidebar header
+    st.set_page_config(page_title="QuickCheat Creator", layout="wide")  # Set page title and layout
+
+    st.title("📝 QuickCheat Creator")
+    st.sidebar.header("Generate Your Instant Cheat Sheet")  # Sidebar header
+
+    st.markdown(""" 
+        Supercharge your exam preparation with **QuickCheat Creator**, your go-to tool for generating instant cheat sheets! 
+        Simply enter the topic name, and watch as our intelligent AI crafts a concise and organized summary of key concepts and essential information tailored to that subject. 
+        No need for extensive study materials—just a few clicks, and you’ll have a personalized cheat sheet at your fingertips. 
+        Perfect for quick reviews and last-minute studying, **QuickCheat Creator** helps you maximize your study efficiency and approach your exams with confidence!
+    """)
 
     # Input field for topic in the sidebar
     topic = st.sidebar.text_input("Enter Topic:", placeholder="e.g., Machine Learning")
@@ -108,9 +116,6 @@ def main():
     else:
         st.warning("Please enter a topic and generate the cheat sheet.")
 
-    # Add footer or additional UI elements here
-    st.markdown("---")
-    st.write("This app generates comprehensive cheat sheets for various topics to assist in your last-minute preparations.")
 
 if __name__ == "__main__":
     main()
